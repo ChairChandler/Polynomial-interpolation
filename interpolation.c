@@ -1,47 +1,60 @@
-#include <stdio.h>
 #include <stdlib.h>
 #include "interpolation.h"
 
-void interpol(double *x, double *fx, int number_x, double *z, double *fz, int number_z) {
+static inline void calculation(double x[], double fx[], size_t number_x, double parameter[]);
+static inline void substitution(double x[], size_t number_x, double parameter[], double z[], double fz[], size_t number_z);
+
+
+
+void interpolation(double x[], double fx[], size_t number_x, double z[], double fz[], size_t number_z)
+{
 	
-	double *parameter,equation,mull;
-	int i,j,k;
-	parameter=(double*)malloc(number_x*sizeof(double));
+    double *parameter;
+    parameter=(double*)malloc((size_t)number_x * sizeof(double));
 	
-	//Calculations phase of parameters
-	for(i=0;i<number_x;i++)
-	{
-		mull=1;
-		for(j=0;j<number_x;j++)
-		{
-			if(j==i)
-			continue;
-			
-			mull*=(x[i]-x[j]);
-		}	
-		parameter[i]=fx[i]/mull;
-	}
-	
-	//Substitution phase
-	for(k=0;k<number_z;k++)
-	{
-		equation=0;
-		for(i=0;i<number_x;i++)
-		{
-			mull=parameter[i];
-			for(j=0;j<number_x;j++)
-			{
-				if(j==i)
-				continue;
-				
-				mull*=(z[k]-x[j]);
-			}
-			equation+=mull;		
-		}
-		fz[k]=equation;
-	}
+    calculation(x, fx, number_x, parameter);
+    substitution(x, number_x, parameter, z, fz, number_z);
 	
 	free(parameter);
-	return 0;
-	
+}
+
+static inline void calculation(double x[], double fx[], size_t number_x, double parameter[])
+{
+    double mullResult;
+    for(size_t actualX=0; actualX<number_x; actualX++)
+    {
+        mullResult=1;
+
+        for(size_t anotherX=0; anotherX<number_x; anotherX++)
+        {
+            if(actualX==anotherX)
+                continue;
+            else
+                mullResult=mullResult * (x[actualX]-x[anotherX]); // (x-x2)*(x-x3)*(x-x4)
+        }
+        parameter[actualX]=fx[actualX]/mullResult; // f(x)=A(x-x2)(x-x3)(x-x4) -> A=f(x)/(x-x2)(x-x3)(x-x4)
+    }
+}
+
+static inline void substitution(double x[], size_t number_x, double parameter[], double z[], double fz[], size_t number_z)
+{
+    double equationResult, mull;
+    for(size_t k=0; k<number_z; k++)
+    {
+        equationResult=0;
+
+        for(size_t actualX=0; actualX<number_x; actualX++)
+        {
+            mull=parameter[actualX];
+            for(size_t anotherX=0; anotherX<number_x; anotherX++)
+            {
+                if(actualX==anotherX)
+                    continue;
+                else
+                    mull=mull * (z[k]-x[anotherX]); // A(x-x2)(x-x3)
+            }
+            equationResult=equationResult + mull; // A(x-x2)(x-x3)+B(x-x1)(x-x3)+...
+        }
+        fz[k]=equationResult;
+    }
 }

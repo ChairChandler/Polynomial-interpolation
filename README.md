@@ -21,14 +21,13 @@ If we want to interpolate the data and find a function that pass to these data t
 
 ###### Solution
 
-![eq3](https://render.githubusercontent.com/render/math?math=f_1%28x%29%20%3D%20a%28x%20-%202%29%28x%20-%203%29%20%5Cquad%5Cland%5Cquad%20f_1%281%29%20%3D%2010&mode=display)
+- ![eq3](https://render.githubusercontent.com/render/math?math=f_1%28x%29%20%3D%20a%28x%20-%202%29%28x%20-%203%29%20%5Cquad%5Cland%5Cquad%20f_1%281%29%20%3D%2010&mode=display)
 
-![eq4](https://render.githubusercontent.com/render/math?math=f_2%28x%29%20%3D%20b%28x%20-%201%29%28x%20-%203%29%20%5Cquad%5Cland%5Cquad%20f_2%282%29%20%3D%202&mode=display)
+- ![eq4](https://render.githubusercontent.com/render/math?math=f_2%28x%29%20%3D%20b%28x%20-%201%29%28x%20-%203%29%20%5Cquad%5Cland%5Cquad%20f_2%282%29%20%3D%202&mode=display)
 
-![eq5](https://render.githubusercontent.com/render/math?math=f_3%28x%29%20%3D%20c%28x%20-%201%29%28x%20-%202%29%20%5Cquad%5Cland%5Cquad%20f_3%283%29%20%3D%207&mode=display)
+- ![eq5](https://render.githubusercontent.com/render/math?math=f_3%28x%29%20%3D%20c%28x%20-%201%29%28x%20-%202%29%20%5Cquad%5Cland%5Cquad%20f_3%283%29%20%3D%207&mode=display)
 
-![eq6](https://render.githubusercontent.com/render/math?math=g%28x%29%20%3D%20f_1%28x%29%20%2B%20f_2%28x%29%20%2B%20f_3%28x%29&mode=display)
+- ![eq6](https://render.githubusercontent.com/render/math?math=g%28x%29%20%3D%20f_1%28x%29%20%2B%20f_2%28x%29%20%2B%20f_3%28x%29&mode=display)
 
-The solution is
 
 ![eq7](https://render.githubusercontent.com/render/math?math=g%28x%29%20%3D%205%28x-2%29%28x-3%29%20-%202%28x-1%29%28x-3%29%20%2B%20%5Cfrac%7B7%7D%7B2%7D%28x-1%29%28x-2%29&mode=display)

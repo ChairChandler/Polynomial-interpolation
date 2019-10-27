@@ -1,4 +1,4 @@
-# Polynomial-interpolation
+# Polynomial-interpolation ![gpl](https://camo.githubusercontent.com/f6da2176c2099de8e0e906323d7f8acc0c61d5d8/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f6c6963656e73652d47504c2d626c7565)
 
 [Polynomial interpolation](https://en.wikipedia.org/wiki/Polynomial_interpolation) is the interpolation of a given data set by the polynomial of lowest possible degree that passes through the points of the dataset.
 

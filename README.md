@@ -5,7 +5,11 @@
 Example
 =========
 
+Lets assume we have a set X = {1, 2, 3} and set Y = {10, 2, 7} which every value belongs to the value from set X at the same index.
+
 ![graph1](https://github.com/ChairChandler/ResourcesRepository/blob/master/graph1.png)
+
+If we want to interpolate the data and find a function that pass to these data the result could be like this.
 
 ![graph2](https://github.com/ChairChandler/ResourcesRepository/blob/master/graph2.png)
 

@@ -4,7 +4,7 @@
 
 Example
 =========
-
+## Introduction
 Lets assume we have a set X = {1, 2, 3} and set Y = {10, 2, 7} which every value belongs to the value from set X at the same index.
 
 ![graph1](https://github.com/ChairChandler/ResourcesRepository/blob/master/graph1.png)

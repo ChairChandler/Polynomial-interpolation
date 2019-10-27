@@ -1,6 +1,8 @@
 #ifndef INTERPOLATION_H
 #define INTERPOLATION_H
 
+#include <stdlib.h>
+
 /* Function arguments:
  * - x  =>  input: function domain,
  * - fx =>  input: set of function values,

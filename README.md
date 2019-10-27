@@ -1,5 +1,10 @@
 # Polynomial-interpolation
 
+[Polynomial interpolation](https://en.wikipedia.org/wiki/Polynomial_interpolation) is the interpolation of a given data set by the polynomial of lowest possible degree that passes through the points of the dataset.
+
+Example
+=========
+
 ![graph1](https://github.com/ChairChandler/ResourcesRepository/blob/master/graph1.png)
 
 ![graph2](https://github.com/ChairChandler/ResourcesRepository/blob/master/graph2.png)

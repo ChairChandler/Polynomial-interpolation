@@ -11,7 +11,7 @@ Lets assume we have a set X = {1, 2, 3} and set Y = {10, 2, 7} which every value
 
 If we want to interpolate the data and find a function that pass to these data the result could be like this.
 
-![graph2](https://github.com/ChairChandler/ResourcesRepository/blob/master/graph2.png)
+![graph2](https://drive.google.com/open?id=1TfU1J8G36qbX-FmY4ApL41xWApxqxpUV)
 
 ###### Math theory
 
